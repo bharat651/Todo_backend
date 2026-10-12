@@ -1,0 +1,77 @@
+#################### API 1 #######################
+
+
+### GET By Status
+GET http://localhost:3000/todos/?status=TO%20DO
+
+### GET by priority
+GET http://localhost:3000/todos/?priority=HIGH
+
+
+### GET by priority AND status 
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+
+
+### GET by search query 
+GET http://localhost:3000/todos/?search_q=Buy
+
+
+### GET by category and status 
+
+GET http://localhost:3000/todos/?category=WORK&status=DONE
+
+
+### GET by category
+
+GET http://localhost:3000/todos/?category=HOME
+
+
+### GET by category and priority
+
+GET http://localhost:3000/todos/?category=LEARNING&priority=HIGH
+
+
+#################### API 2 #######################
+
+### GET todo By Id
+
+GET http://localhost:3000/todos/1/
+
+
+################ API 3 ###########
+
+### GET by date
+
+GET http://localhost:3000/agenda/?date=2021-04-10
+
+
+############### API 4 #########
+
+### POST todo 
+ POST http://localhost:3000/todos/
+ Content-Type:application/json
+ {
+    "id": 2,
+    "todo": "Buy a Car",
+    "priority": "MEDIUM",
+    "status": "TO DO",
+    "category": "HOME",
+    "dueDate": "2021-09-22"
+  }
+
+############ API 5 ##########
+
+### PUT by Id
+
+PUT http://localhost:3000/todos/1/
+Content-Type:application/json
+{
+  "status":"TO DO"
+}
+
+
+############ API 6 ##########
+
+### DELETE by id 
+
+DELETE http://localhost:3000/todos/6/
